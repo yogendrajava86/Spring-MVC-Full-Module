@@ -29,17 +29,17 @@ public class EmployeeValidator implements Validator{
 		}
 
 		if(!Pattern.matches("[A-Za-z0-9]{4,8}", e.getEmpPwd())) {
-			errors.rejectValue("empPwd", null,"Please Enter Valid Password");
+			errors.rejectValue("empPwd", "epassErr");
 		}
 		//radio buttons
 		//null,empty,spaces (shulod not be)
 		if(!StringUtils.hasText(e.getEmpGen())) {
-			errors.rejectValue("empGen", null,"Please Choose valid gender");
+			errors.rejectValue("empGen", "egenErr");
 		}
 
 		//text area
 		if(!Pattern.matches("[A-Za-z0-9\\s]{10,250}", e.getEmpAddr())) {
-			errors.rejectValue("empAddr", null,"Please Enter Address");
+			errors.rejectValue("empAddr", "eaddrErr");
 		}
 
 		//null,empty,spaces (shulod not be)
@@ -49,7 +49,7 @@ public class EmployeeValidator implements Validator{
 		
 		//lang-checkbox-List
 		if(e.getEmpLangs()==null || e.getEmpLangs().isEmpty()) {
-			errors.rejectValue("empLangs", null,"Please choose at least one Language");
+			errors.rejectValue("empLangs", "elangErr");
 			
 		}
 

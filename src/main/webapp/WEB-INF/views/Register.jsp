@@ -29,7 +29,7 @@
   <form:errors path="empName" cssClass="err"/>    
  <spring:message code="epwd"/> : <form:password path="empPwd"/>
   <form:errors path="empPwd" cssClass="err"/>
- <spring:message code="egen"/>   : <form:radiobutton path="empGen" value="Male"/> Male <form:radiobutton path="empGen" value="Female"/> Female
+ <spring:message code="egen"/>   : <form:radiobutton path="empGen" value="Male"/> <spring:message code="genLabelMale"/> <form:radiobutton path="empGen" value="Female"/> <spring:message code="genLabelFemale"/>
  <form:errors path="empGen" cssClass="err"/>
  <spring:message code="eaddr"/>  : <form:textarea path="empAddr"/> 
  <form:errors path="empAddr" cssClass="err"/>
@@ -41,9 +41,10 @@
  			</form:select>
  <form:errors path="empCntry" cssClass="err"/> 			
  <spring:message code="elang"/>:
-   <form:checkbox path="empLangs" value="ENGLISH"/> ENGLISH 			
-   <form:checkbox path="empLangs" value="HINDI"/> HINDI 			
-   <form:checkbox path="empLangs" value="TELUGU"/> TELUGU
+   <form:checkbox path="empLangs" value="ENGLISH"/> <spring:message code="langLabelEn"/> 			
+   <form:checkbox path="empLangs" value="HINDI"/> <spring:message code="langLabelHi"/> 			
+   <form:checkbox path="empLangs" value="TELUGU"/> <spring:message code="langLabelTe"/>
+   <form:checkbox path="empLangs" value="KANNADA"/> <spring:message code="langLabelKn"/>
   <form:errors path="empLangs" cssClass="err"/>   
    
    <input type="submit" value="REGISTER"/> 			
